@@ -5,12 +5,17 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
+import '@/assets/css/reset.css'
+import '@/assets/css/variables.css'
+import '@/assets/css/styles.css'
+
 import Home from './components/Pages/Home'
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+       <div className="App">
         <Routes>
 	        <Route exact path="/" element={<Home />} />
         </Routes>
