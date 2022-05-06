@@ -1,0 +1,132 @@
+/* Mobile first */
+@custom-media --bp-mobile (min-width: 360px);
+@custom-media --bp-big-mobile (min-width: 600px);
+@custom-media --bp-tablet (min-width: 768px);
+@custom-media --bp-big-tablet (min-width: 992px);
+@custom-media --bp-desktop (min-width: 1280px);
+@custom-media --bp-hd (min-width: 1920px);
+
+/* Desktop first */
+@custom-media --bp-mobile-down (max-width: 359px);
+@custom-media --bp-big-mobile-down (max-width: 599px);
+@custom-media --bp-tablet-down (max-width: 767px);
+@custom-media --bp-big-tablet-down (max-width: 991px);
+@custom-media --bp-desktop-down (max-width: 1279px);
+
+:root {
+  /* Z-Index */
+  --z-index-pawn: 100;
+  --z-index-knight: 200;
+  --z-index-bishop: 300;
+  --z-index-rook: 400;
+  --z-index-queen: 500;
+  --z-index-king: 600;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-extra-black: 900;
+
+  /* Line heights */
+  --line-height-100: 1;
+  --line-height-200: 1.2;
+  --line-height-300: 1.3;
+  --line-height-400: 1.4;
+  --line-height-500: 1.5;
+  --line-height-600: 1.6;
+  --line-height-700: 1.7;
+  --line-height-800: 1.8;
+  --line-height-900: 1.9;
+
+  /* Font families */
+  --font-family-one: 'Mark Pro';
+
+  /* Typhography */
+  --font-family: var(--font-family-one), sans-serif;
+  --font-size: 16px;
+  --font-weight: var(--font-weight-regular);
+  --line-height: var(--line-height-400);
+
+  @media (--bp-mobile-down) {
+    --font-size: 14px;
+  }
+
+  /* Colors Pure */
+  --color-pure-black: #000;
+  --color-pure-white: #fff;
+
+  /* Colors Fake Pure */
+  --color-black: #2b2833;
+  --color-white: #fcfcfc;
+
+  /* Colors Brand */
+  --color-brand: #00bff2;
+
+  /* Colors Status */
+  --color-error: #fb4e4e;
+  --color-error-light: #ff6262;
+  --color-error-dark: #e93c3c;
+  --color-success: #2ac769;
+  --color-success-light: #40dd7f;
+  --color-success-dark: #1ab759;
+  --color-warning: #f6a609;
+  --color-warning-backogrund: #ffbc1f50;
+  --color-warning-light: #ffbc1f;
+  --color-warning-dark: #e89806;
+  --color-info: #4263eb;
+  --color-info-light: #6680ee;
+  --color-info-dark: #2445cd;
+
+  /* Colors App */
+  --color-text: #c1c1e1;
+  --color-text-secondary: #6be4ff;
+  --color-background: #272a3a;
+  --color-background-secondary: #464b67;
+  --color-primary: var(--color-brand);
+  --color-primary-inside: var(--color-white);
+  --color-primary-background: var(--color-brand);
+  --color-border: #464b67;
+
+  /* Radiuses */
+  --radius-100: 2px;
+  --radius-200: 4px;
+  --radius-300: 8px;
+  --radius-400: 12px;
+  --radius-500: 16px;
+
+  /* Shadows */
+  --shadow: 4px 4px 16px rgba(110, 121, 140, 0.16);
+  --shadow-100: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-200: 0 0 5px rgba(0, 0, 0, 0.05), 0 25px 35px rgba(0, 0, 0, 0.03);
+
+  /* Containers */
+  --container-100: 304px;
+  --container-200: 608px;
+  --container-300: 740px;
+  --container-400: 904px;
+  --container-500: 1232px;
+  --container-600: 1432px;
+  --container-700: 1632px;
+  --container-800: 1932px;
+
+  /* Spaces */
+  --space-section: 24px;
+
+  /* Gaps */
+  --gap-container: 16px;
+
+  /* Nav */
+  --nav-height: 64px;
+
+  /* Special */
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom);
+
+}
+

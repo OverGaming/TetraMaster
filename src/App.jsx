@@ -1,27 +1,26 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
 import {
-  BrowserRouter ,
-  Routes,
-  Route,
-} from "react-router-dom";
-
-import '@/assets/css/reset.css'
-import '@/assets/css/variables.css'
-import '@/assets/css/styles.css'
+    BrowserRouter,
+    Routes,
+    Route
+} from 'react-router-dom'
 
 import Home from './components/Pages/Home'
 
-function App() {
-  return (
-    <BrowserRouter>
-       <div className="App">
-        <Routes>
-	        <Route exact path="/" element={<Home />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+function App () {
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        exact
+                        path="/"
+                        element={<Home />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+
+    )
 }
 
 export default App
