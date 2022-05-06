@@ -1,11 +1,15 @@
 import LayoutDefault from '@/components/Layout/Default'
-const Home = () => {
-    return (
+import CounterEvents from '@/components/Sample/CounterEvents'
 
+const Home = () => {
+    const eventFromChildren = () => {
+        console.log('clickEvent')
+    }
+    return (
         <LayoutDefault
-            content={<p>
-                Hello Vite + React!
-            </p>}
+            content={<CounterEvents
+                onEvent={eventFromChildren}
+            />}
         />
 
     )
