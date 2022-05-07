@@ -11,3 +11,18 @@
     box-shadow: 0 0 100px rgb(107 228 255 / 100%);
   }
 }
+
+@keyframes loading-button {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+

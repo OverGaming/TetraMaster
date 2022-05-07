@@ -1,31 +1,11 @@
 import React from 'react'
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from 'react-router-dom'
+import Router from './router/Router'
 
-import Home from './components/Pages/Home'
-import Splash from './components/Pages/Splash'
-
-function App () {
+export default function App () {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Routes>
-                    <Route
-                        exact
-                        path="/"
-                        element={<Splash />} />
-                    <Route
-                        exact
-                        path="/home"
-                        element={<Home />} />
-                </Routes>
-            </BrowserRouter>
+            <Router />
         </div>
 
     )
 }
-
-export default App

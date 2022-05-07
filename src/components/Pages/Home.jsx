@@ -3,7 +3,7 @@ import CounterEvents from '@/components/Sample/CounterEvents'
 import ListSamplePost from '@/components/List/SamplePost'
 import useSampleGet from '@/hooks/useApi/posts/get'
 
-const Home = () => {
+export default function Home () {
     const {
         data: entries,
         loading
@@ -30,5 +30,3 @@ const Home = () => {
 
     )
 }
-
-export default Home
