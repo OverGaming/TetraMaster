@@ -1,29 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import axios from '@/api/clients/app'
 
-const useAxios = ({ url, method, body = null, headers = null }) => {
-    const [response, setResponse] = useState(null)
+export default function useAxios(axiosParams) {
+    const [response, setResponse] = useState(undefined)
     const [error, setError] = useState('')
-    const [loading, setloading] = useState(true)
+    const [loading, setLoading] = useState(true)
 
-    const fetchData = () => {
-        axios[method](url, JSON.parse(headers), JSON.parse(body))
-            .then((res) => {
-                setResponse(res.data)
-            })
-            .catch((err) => {
-                setError(err)
-            })
+    const fetchData = useCallback((params) => {
+        axios.request(params)
+            .then(setResponse)
+            .catch(setError)
             .finally(() => {
-                setloading(false)
+                setLoading(false)
             })
-    }
+    }, [])
 
     useEffect(() => {
-        fetchData()
-    }, [method, url, body, headers])
+        fetchData(axiosParams)
+    }, [fetchData]) // execute once only
 
     return { response, error, loading }
 }
-
-export default useAxios

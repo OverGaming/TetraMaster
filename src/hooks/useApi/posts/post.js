@@ -1,9 +1,9 @@
 import useAxios from '../useAxios'
 
-const useSampleGet = (params) => {
+export default function useSamplePost (params) {
     const { response, loading, error } = useAxios({
         method: 'post',
-        url: '/posts',
+        url: '/entries',
         data: {
             id: params?.id
         }
@@ -11,5 +11,3 @@ const useSampleGet = (params) => {
 
     return { response, loading, error }
 }
-
-export default useSampleGet

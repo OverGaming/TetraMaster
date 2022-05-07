@@ -1,15 +1,19 @@
+import { useEffect, useState } from 'react'
 import useAxios from '../useAxios'
 
-const useSampleGet = ({ url, method, body = null, headers = null }) => {
+export default function useSampleGet(params) {
+    const [data, setData] = useState(null)
     const { response, loading, error } = useAxios({
-        method: 'post',
-        url: '/posts',
+        method: 'get',
+        url: '/7b539186-e7dd-4fbf-8a3d-b448cb1c742d',
         params: {
             test: true
         }
     })
 
-    return { response, loading, error }
-}
+    useEffect(() => {
+        setData(response?.data)
+    }, [response])
 
-export default useSampleGet
+    return { data, response, loading, error }
+}
