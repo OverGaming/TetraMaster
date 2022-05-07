@@ -1,14 +1,14 @@
 module.exports = {
     env: {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
+        browser: true,
+        commonjs: true,
+        es6: true,
+        node: true
     },
     extends: [
-        "eslint:recommended",
+        'eslint:recommended',
         'plugin:react/recommended',
-        "plugin:react-hooks/recommended",
+        'plugin:react-hooks/recommended',
         'standard'
     ],
     parserOptions: {
@@ -24,14 +24,16 @@ module.exports = {
     ],
     rules: {
         indent: ['error', 4],
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/jsx-filename-extension": [
+        'eslint-disable-line react-hooks/exhaustive-deps': 'off',
+        'space-before-function-paren': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/jsx-filename-extension': [
             1,
             {
-                "extensions": [
-                    ".js",
-                    ".jsx"
+                extensions: [
+                    '.js',
+                    '.jsx'
                 ]
             }
         ]
