@@ -18,9 +18,11 @@ const Home = () => {
                 {
                     <>
                         <CounterEvents onEvent={eventFromChildren} />
-                        { !loading
-                            ? <ListSamplePost entries={ entries } />
-                            : 'loading' }
+                        {
+                            !loading
+                                ? <ListSamplePost entries={ entries } />
+                                : 'loading'
+                        }
                     </>
 
                 }
