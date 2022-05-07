@@ -8,8 +8,6 @@
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 > Opinionated Vite starter template.
 
-![screenshot](./src/assets/images/app_screenshot.gif)
-
 ## Description
 
 An starter template for Vite React 18 projects including a bunch of useful tools and libraries enforcing best practices.
