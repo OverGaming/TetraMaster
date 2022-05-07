@@ -1,0 +1,36 @@
+.graphics-logo {
+  position: relative;
+  svg {
+    position: relative;
+    width: 100%;
+    fill: var(--color-brand);
+    z-index: 2;
+
+  }
+
+  &__centered {
+    position: absolute;
+    top: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    padding: 24px;
+
+
+    &-animation {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      animation: glowing 5s infinite ease;
+      background-color: var(--color-background);
+      z-index: 1;
+
+    }
+  }
+
+
+}
+

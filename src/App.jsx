@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import Home from './components/Pages/Home'
+import Splash from './components/Pages/Splash'
 
 function App () {
     return (
@@ -15,6 +16,10 @@ function App () {
                     <Route
                         exact
                         path="/"
+                        element={<Splash />} />
+                    <Route
+                        exact
+                        path="/home"
                         element={<Home />} />
                 </Routes>
             </BrowserRouter>
