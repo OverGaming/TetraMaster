@@ -17,7 +17,6 @@ export default function Button ({
     }
 
     const _onButtonPress = () => {
-        // TODO: Add Tracking Here
         onButtonPress()
     }
 
