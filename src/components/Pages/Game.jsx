@@ -1,18 +1,57 @@
-import LayoutFull from '@/components/Layout/Full'
+import LayoutGame from '@/components/Layout/Game'
 import BoardDefault from '@/components/Board/Default'
+import PropTypes from 'prop-types'
 
 import './game.scss'
+import useBoard from '@/hooks/useBoard'
+import useDeck from '@/hooks/useDeck'
 
-export default function Menu () {
+import Card from '../Board/Card'
+
+export default function Game ({ width = 5, height = 5, blockeds = 5 }) {
+    Card.propTypes = {
+        width: PropTypes.number,
+        height: PropTypes.bool,
+        blockeds: PropTypes.string
+    }
+    const { deck: enemyDeck } = useDeck({
+        isEnemy: true,
+        size: 5
+    })
+
+    const { deck } = useDeck({
+        size: 5
+    })
+
+    const { board } = useBoard({
+        width,
+        height,
+        blockeds
+    })
     return (
-        <LayoutFull
+        <LayoutGame
             centered
-            content=
+            hand =
+                {
+                    deck.cards.map((card, i) => <Card
+                        key={i}
+                        flipped={card.flipped}
+                        image={card.image}
+                    />)
+                }
+            enemyHand =
+                {
+                    enemyDeck.cards.map((card, i) => <Card
+                        key={i}
+                        flipped={card.flipped}
+                        image={card.image}
+                    />)
+                }
+            content =
                 {
                     <div className="page-game">
                         <BoardDefault
-                            width={10}
-                            height={2}
+                            board={ board }
                         />
                     </div>
                 }

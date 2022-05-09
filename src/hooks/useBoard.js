@@ -8,19 +8,20 @@ export default function useBoard({ width, height, blockeds }) {
     }
 
     const [board, setBoard] = useState([])
+    const [blockedCount, setBlockedCount] = useState(blockeds)
 
     const getRandomCell = () => getCell({
-        x: Math.floor(Math.random() * width),
-        y: Math.floor(Math.random() * height)
+        x: Math.floor(Math.random() * height),
+        y: Math.floor(Math.random() * width)
     })
 
-    const getCell = ({ x, y }) => board[y][x]
+    const getCell = ({ x, y }) => board[x][y]
     const setCellStatus = (cell, status) => {
-        console.log(cell)
-        cell = status
+        const clonedBoard = [...board]
+        clonedBoard[cell.x][cell.y].status = status
+        setBoard(clonedBoard)
     }
     const createBoardMatrix = () => {
-        console.log()
         setBoard(
             new Array(height)
                 .fill(0)
@@ -35,12 +36,13 @@ export default function useBoard({ width, height, blockeds }) {
 
     const getRandomEmptyCell = () => {
         const cell = getRandomCell()
-        return cell // === 0 ? cell : getRandomEmptyCell()
+        return cell.status === 0 ? cell : getRandomEmptyCell()
     }
 
     useEffect(() => {
-        if (board.length) {
+        if (board.length && blockedCount) {
             setCellStatus(getRandomEmptyCell(), STATUS.BLOCKED)
+            setBlockedCount(blockedCount - 1)
         }
     }, [board])
 

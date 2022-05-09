@@ -1,0 +1,17 @@
+.layout-game {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__hand {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: em(4px);
+  }
+
+}
