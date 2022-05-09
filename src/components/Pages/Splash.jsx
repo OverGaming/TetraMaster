@@ -9,7 +9,7 @@ export default function Splash () {
     useEffect(() => {
         setTimeout(() => {
             navigate('menu')
-        }, 5000)
+        }, 4000)
     }, [navigate])
 
     return (

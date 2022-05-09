@@ -1,4 +1,5 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  font-family: 'Ubuntu', sans-serif;
 }

@@ -1,0 +1,9 @@
+.board {
+  display: grid;
+  grid-gap: em(2px);
+  &__row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: em(2px);
+  }
+}

@@ -1,17 +1,23 @@
 .button {
   background-color: var(--color-border);
   color: var(--color-inside);
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: em(8px) em(16px) em(8px);
+  line-height: 1.2;
+  border-radius: em(4px);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
 
   &--disabled {
     pointer-events: none;
     opacity: 0.5;
+    cursor: not-allowed;
   }
 
   &--loading {
     pointer-events: none;
     animation: loading-button 2s infinite ease;
+    cursor: wait;
   }
 }

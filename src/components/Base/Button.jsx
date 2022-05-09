@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom'
+
 import './button.scss'
 
 export default function Button ({
@@ -6,17 +8,24 @@ export default function Button ({
     secondary,
     loading,
     text = 'Press',
+    path,
     onButtonPress = () => {}
 }) {
+    const navigate = useNavigate()
     Button.propTypes = {
         disabled: PropTypes.bool,
         secondary: PropTypes.bool,
         loading: PropTypes.bool,
         text: PropTypes.string,
-        onButtonPress: PropTypes.func
+        onButtonPress: PropTypes.func,
+        path: PropTypes.string
     }
 
     const _onButtonPress = () => {
+        if (path?.name) {
+            navigate(path.name, path.params)
+            return
+        }
         onButtonPress()
     }
 
