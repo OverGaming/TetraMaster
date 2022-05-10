@@ -131,3 +131,16 @@ textarea:-webkit-autofill:active {
   -webkit-transition-delay: 9999s;
   transition-delay: 9999s;
 }
+
+input {
+  border: none;
+  -webkit-appearance: none;
+   box-shadow: none;
+}
+
+input:focus {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+

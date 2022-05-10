@@ -9,7 +9,7 @@ import useDeck from '@/hooks/useDeck'
 import Card from '../Board/Card'
 
 export default function Game ({ width = 5, height = 5, blockeds = 5 }) {
-    Card.propTypes = {
+    Game.propTypes = {
         width: PropTypes.number,
         height: PropTypes.bool,
         blockeds: PropTypes.string

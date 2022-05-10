@@ -18,7 +18,7 @@ export default function Button ({
         loading: PropTypes.bool,
         text: PropTypes.string,
         onButtonPress: PropTypes.func,
-        path: PropTypes.string
+        path: PropTypes.object
     }
 
     const _onButtonPress = () => {
@@ -32,9 +32,9 @@ export default function Button ({
     return (
         <button onClick={_onButtonPress} className={`
             button
-            ${disabled ? 'button--disabled' : ''}
-            ${secondary ? 'button--secondary' : ''}
-            ${loading ? 'button--loading' : ''}
+            ${disabled && 'button--disabled'}
+            ${secondary && 'button--secondary'}
+            ${loading && 'button--loading'}
         }
         `}>{text}</button>
     )

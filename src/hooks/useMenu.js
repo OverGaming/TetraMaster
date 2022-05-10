@@ -6,11 +6,15 @@ export default function useMenu(axiosParams) {
             path: { name: '/game', params: {} }
         },
         {
-            title: 'Achievements'
+            title: 'Local Battle'
 
         },
         {
-            title: 'Settings'
+            title: 'Decks'
+
+        },
+        {
+            title: 'Achievements'
 
         }
     ]

@@ -3,13 +3,18 @@ import Logo from '@/components/Core/Graphics/Logo'
 import './splash.scss'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import {
+    increment
+} from '@/store/user'
 
 export default function Splash () {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
     useEffect(() => {
-        setTimeout(() => {
-            navigate('menu')
-        }, 4000)
+        navigate('menu')
+        dispatch(increment())
     }, [navigate])
 
     return (

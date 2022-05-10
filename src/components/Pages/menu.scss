@@ -1,4 +1,21 @@
 .page-menu {
   display: grid;
-  grid-gap: em(16px);
+  grid-gap: em(24px);
+  padding: 10%;
+
+  &__logo {
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 0 em(32px);
+    grid-gap: em(8px);
+    display: grid;
+  }
+
+  &__inits {
+    text-align: center;
+  }
 }

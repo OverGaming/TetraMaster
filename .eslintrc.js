@@ -28,6 +28,7 @@ module.exports = {
         'space-before-function-paren': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
+        'react-hooks/exhaustive-deps': 'off',
         'react/jsx-filename-extension': [
             1,
             {

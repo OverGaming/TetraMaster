@@ -1,0 +1,15 @@
+.input {
+  display: grid;
+
+  &__label {
+    padding: em(4px) 0;
+    font-size: em(12px);
+    font-weight: bold;
+  }
+
+  &__field {
+    font-size: em(18px);
+    padding: em(8px);
+    height: em(32px);
+  }
+}

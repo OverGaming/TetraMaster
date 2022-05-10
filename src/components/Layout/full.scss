@@ -2,10 +2,25 @@
   display: grid;
   width: 100vw;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+
 
   &--centered {
     justify-content: center;
     align-items: center;
   }
 
+  &__version {
+    opacity: 0.7;
+    &-content {
+      background-color: var(--color-border);
+      padding: em(8px) em(16px);
+      border-radius: em(4px);
+    }
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: em(16px);
+  }
 }

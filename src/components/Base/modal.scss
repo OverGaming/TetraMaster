@@ -1,0 +1,30 @@
+.modal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-index-knight);
+
+  &__inner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-border);
+    width: 100vw;
+    z-index: var(--z-index-bishop);
+    border-radius: 5px 5px 0 0;
+    padding: em(16px);
+
+  }
+
+  &__header {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    padding: em(16px);
+  }
+}

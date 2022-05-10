@@ -1,5 +1,5 @@
 .card {
-  $ratio: 0.27;
+  $ratio: 0.32;
   $border: 2px;
   width: calc(var(--card-width) * $ratio);
   height:  calc(var(--card-height) * $ratio);
@@ -30,6 +30,103 @@
     background-color: var(--color-border);
     &:before {
       opacity: 0.7;
+    }
+  }
+  &__layout {
+    position: absolute;
+    display: grid;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: 500;
+    font-size: em(14px);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__arrow {
+    position: absolute;
+    pointer-events: initial;
+
+
+    // ROW-ALIGN
+    &--0, &--1, &--8 {
+      align-self: start;
+    }
+    &--3, &--2, &--7 {
+      align-self: center;
+    }
+
+    &--4, &--5, &--3 {
+      align-self: end;
+    }
+
+    // COLUMN-ALIGN
+
+    &--6, &--7, &--8 {
+      justify-self: start;
+    }
+
+    &--0, &--4{
+      justify-self: center;
+    }
+
+    &--1, &--2, &--3 {
+      justify-self: end;
+    }
+
+    &--0 {
+      svg {
+        transform: rotate(90deg);
+        fill: red !important;
+
+      }
+    }
+
+    &--1 {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    &--2 {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    &--3 {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+
+    &--4 {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    &--5 {
+       svg {
+         transform: rotate(270deg);
+       }
+    }
+
+    &--6 {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--7 {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    &--8 {
+      svg {
+        transform: rotate(0);
+      }
     }
   }
 
