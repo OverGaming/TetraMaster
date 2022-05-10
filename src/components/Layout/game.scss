@@ -14,4 +14,9 @@
     grid-gap: em(4px);
   }
 
+  &__board {
+    display: grid;
+    justify-content: center;
+  }
+
 }

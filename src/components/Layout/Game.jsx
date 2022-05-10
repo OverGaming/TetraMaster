@@ -15,7 +15,9 @@ export default function Layout ({ content, hand, enemyHand, centered }) {
                 { enemyHand }
             </div>
             <div className="layout-game__board" >
-                { content }
+                <div>
+                    { content }
+                </div>
             </div>
             <div className="layout-game__hand" >
                 { hand }

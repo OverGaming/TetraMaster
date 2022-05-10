@@ -17,7 +17,7 @@ export default function Router () {
                 <Route exact path="/" element={<Splash />} />
                 <Route exact path="/home" element={<Home />} />
                 <Route exact path="/menu" element={<Menu />} />
-                <Route exact path="/game" element={<Game />} />
+                <Route exact path="/game" element={<Game width={4} height={4} />} />
             </Routes>
         </BrowserRouter>
     )
