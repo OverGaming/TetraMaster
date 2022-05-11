@@ -12,8 +12,7 @@ export default function Menu () {
     const { MENU_OPTIONS } = useMenu()
     const count = useSelector(selectInits)
     const name = useSelector(selectName)
-    console.log({ name })
-    console.log({ count })
+
     return (
         <LayoutFull
             centered

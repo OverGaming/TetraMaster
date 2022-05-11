@@ -12,7 +12,73 @@ export default function useSampleGet(params) {
     })
 
     useEffect(() => {
-        setData(response?.data)
+        // TODO: Change key to use camelCase or _ in key object
+        const rawResponse = [
+            {
+                id: 1,
+                name: 'Jason Bourne',
+                provider: 'United Health',
+                priceEstimates: [
+                    {
+                        plan: 'standard',
+                        priceEstimate: 91
+                    },
+                    {
+                        plan: 'premium',
+                        priceEstimate: 121
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'James Bond',
+                provider: 'United Health',
+                priceEstimates: [
+                    {
+                        plan: 'standard',
+                        priceEstimate: 90
+                    },
+                    {
+                        plan: 'premium',
+                        priceEstimate: 120
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Ethan Hunt',
+                provider: 'Distributed Health',
+                priceEstimates: [
+                    {
+                        plan: 'basic',
+                        priceEstimate: 50
+                    },
+                    {
+                        plan: 'standard',
+                        priceEstimate: 99
+                    }
+                ]
+            }
+        ]
+        const mappedResponse = rawResponse.reduce((acc, entry) => {
+            const key = entry.provider
+            const iterationMember = {
+                name: entry.name,
+                prices: entry.priceEstimates
+            }
+            if (acc[key]) {
+                acc[key].members.push(iterationMember)
+            } else {
+                acc[key] = {
+                    id: entry.id,
+                    name: entry.provider,
+                    plans: entry.priceEstimates,
+                    members: [iterationMember]
+                }
+            }
+            return acc
+        }, {})
+        setData(mappedResponse)
     }, [response])
 
     return { data, response, loading, error }

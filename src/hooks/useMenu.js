@@ -16,6 +16,11 @@ export default function useMenu(axiosParams) {
         {
             title: 'Achievements'
 
+        },
+        {
+            title: 'Oyster',
+            path: { name: '/oyster', params: {} }
+
         }
     ]
 

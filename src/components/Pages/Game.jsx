@@ -37,6 +37,7 @@ export default function Game ({ width = 5, height = 5, blockeds = 5 }) {
                         key={i}
                         flipped={card.flipped}
                         image={card.image}
+                        directions={card.directions}
                     />)
                 }
             enemyHand =
@@ -45,6 +46,7 @@ export default function Game ({ width = 5, height = 5, blockeds = 5 }) {
                         key={i}
                         flipped={card.flipped}
                         image={card.image}
+                        directions={card.directions}
                     />)
                 }
             content =

@@ -20,7 +20,6 @@ export default function Input ({
     }
 
     const _onBlur = () => {
-        console.log('blur')
         onBlur()
     }
 

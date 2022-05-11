@@ -30,7 +30,6 @@ export default function Login () {
     }
 
     const sendForm = () => {
-        console.log('dispatching')
         dispatch(setName(loginData.name))
     }
 
