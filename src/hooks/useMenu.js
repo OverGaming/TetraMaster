@@ -6,6 +6,11 @@ export default function useMenu(axiosParams) {
             path: { name: '/game', params: {} }
         },
         {
+            title: 'Oyster',
+            path: { name: '/oyster', params: {} }
+
+        },
+        {
             title: 'Local Battle'
 
         },
@@ -15,11 +20,6 @@ export default function useMenu(axiosParams) {
         },
         {
             title: 'Achievements'
-
-        },
-        {
-            title: 'Oyster',
-            path: { name: '/oyster', params: {} }
 
         }
     ]

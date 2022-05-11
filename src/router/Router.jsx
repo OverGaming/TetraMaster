@@ -15,6 +15,8 @@ export default function Router () {
     return (
         <BrowserRouter>
             <Routes>
+                <Route exact path="/oyster" element={<Oyster/>} />
+
                 <Route exact path="/" element={<Splash />} />
                 <Route exact path="/home" element={<Home />} />
                 <Route exact path="/menu" element={<Menu />} />
@@ -23,7 +25,6 @@ export default function Router () {
                     path="/game"
                     element={<Game width={4} height={4} />}
                 />
-                <Route exact path="/oyster" element={<Oyster/>} />
 
             </Routes>
         </BrowserRouter>

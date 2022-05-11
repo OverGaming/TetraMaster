@@ -13,6 +13,7 @@ export default function useSampleGet(params) {
 
     useEffect(() => {
         // TODO: Change key to use camelCase or _ in key object
+        // MOCK JSON
         const rawResponse = [
             {
                 id: 1,
@@ -60,6 +61,7 @@ export default function useSampleGet(params) {
                 ]
             }
         ]
+        // MAPPED RESPONSE
         const mappedResponse = rawResponse.reduce((acc, entry) => {
             const key = entry.provider
             const iterationMember = {
